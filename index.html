@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="es-MX" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <script>
+        /* Marca el documento como "con JS" antes del primer pintado (evita parpadeos y mantiene el sitio usable sin JS). */
+        document.documentElement.className = document.documentElement.className.replace('no-js', 'js is-loading');
+    </script>
+
+    <!-- ═══════ SEO ═══════ -->
+    <title>Catrin Barbershop | Barbería en Culiacán: cortes, barba y tintes</title>
+    <meta name="description" content="Barbería en Plaza Villas del Río, Culiacán. Corte moderno y clásico, corte para niños, delineado y camuflaje de barba, mask negra y tintes. Agenda por WhatsApp.">
+    <meta name="keywords" content="barbería en Culiacán, barber shop Culiacán, corte de cabello hombre Culiacán, delineado de barba, corte para niños, camuflaje de barba, tintes, Catrin Barbershop, Plaza Villas del Río">
+    <meta name="author" content="Catrin Barbershop">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="geo.region" content="MX-SIN">
+    <meta name="geo.placename" content="Culiacán, Sinaloa">
+    <meta name="theme-color" content="#0a0a0b">
+    <meta name="color-scheme" content="dark light">
+    <!-- TODO producción: con el dominio final, añadir <link rel="canonical" href="https://TU-DOMINIO.com/"> y og:url, y convertir og:image, twitter:image y las imágenes del JSON-LD a URLs absolutas. -->
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_MX">
+    <meta property="og:site_name" content="Catrin Barbershop">
+    <meta property="og:title" content="Catrin Barbershop | Sal hecho un catrín">
+    <meta property="og:description" content="Cortes modernos y clásicos, barba a navaja, corte para niños y tintes en Plaza Villas del Río, Culiacán. Reserva por WhatsApp.">
+    <meta property="og:image" content="media/img/og-cover.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Logotipo de Catrin Barbershop: calavera con barba y navajas cruzadas">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Catrin Barbershop | Sal hecho un catrín">
+    <meta name="twitter:description" content="Barbería en Culiacán. Cortes, barba a navaja, corte para niños y tintes. Reserva por WhatsApp.">
+    <meta name="twitter:image" content="media/img/og-cover.jpg">
+
+    <link rel="icon" href="media/img/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="media/img/icon-192.png" sizes="192x192" type="image/png">
+    <link rel="apple-touch-icon" href="media/img/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Datos estructurados (SEO local) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BarberShop",
+        "name": "Catrin Barbershop",
+        "image": "media/img/fachada.webp",
+        "logo": "media/img/icon-512.png",
+        "description": "Barbería en Culiacán con corte moderno y clásico, corte para niños, delineado y camuflaje de barba, mask negra, faciales y tintes.",
+        "telephone": "+52 667 775 3403",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Plaza Villas del Río, Local 17",
+            "addressLocality": "Culiacán",
+            "addressRegion": "Sinaloa",
+            "addressCountry": "MX"
+        },
+        "openingHoursSpecification": [{
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "10:00",
+            "closes": "20:00"
+        }],
+        "hasMap": "https://www.google.com/maps/search/?api=1&query=Plaza+Villas+del+R%C3%ADo+Culiac%C3%A1n",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Servicios",
+            "itemListElement": [
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Corte moderno" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Corte clásico" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Corte para niños" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Delineado de barba" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Camuflaje de barba" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mask negra" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tintes" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Faciales y mascarillas" } }
+            ]
+        }
+    }
+    </script>
+</head>
+
+<body>
+
+<!-- Sprite de iconos (Phosphor Icons, MIT) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+<symbol id="i-arrow-down" viewBox="0 0 256 256"><path d="M205.66,149.66l-72,72a8,8,0,0,1-11.32,0l-72-72a8,8,0,0,1,11.32-11.32L120,196.69V40a8,8,0,0,1,16,0V196.69l58.34-58.35a8,8,0,0,1,11.32,11.32Z"/></symbol>
+<symbol id="i-arrow-left" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"/></symbol>
+<symbol id="i-arrow-right" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></symbol>
+<symbol id="i-arrow-up-right" viewBox="0 0 256 256"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></symbol>
+<symbol id="i-check-circle" viewBox="0 0 256 256"><path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/></symbol>
+<symbol id="i-clock" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></symbol>
+<symbol id="i-facebook-logo" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"/></symbol>
+<symbol id="i-instagram-logo" viewBox="0 0 256 256"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"/></symbol>
+<symbol id="i-list" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"/></symbol>
+<symbol id="i-map-pin" viewBox="0 0 256 256"><path d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z"/></symbol>
+<symbol id="i-phone" viewBox="0 0 256 256"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"/></symbol>
+<symbol id="i-scissors" viewBox="0 0 256 256"><path d="M157.73,113.13A8,8,0,0,1,159.82,102L227.48,55.7a8,8,0,0,1,9,13.21l-67.67,46.3a7.92,7.92,0,0,1-4.51,1.4A8,8,0,0,1,157.73,113.13Zm80.87,85.09a8,8,0,0,1-11.12,2.08L136,137.7,93.49,166.78a36,36,0,1,1-9-13.19L121.83,128,84.44,102.41a35.86,35.86,0,1,1,9-13.19l143,97.87A8,8,0,0,1,238.6,198.22ZM80,180a20,20,0,1,0-5.86,14.14A19.85,19.85,0,0,0,80,180ZM74.14,90.13a20,20,0,1,0-28.28,0A19.85,19.85,0,0,0,74.14,90.13Z"/></symbol>
+<symbol id="i-whatsapp-logo" viewBox="0 0 256 256"><path d="M152.58,145.23l23,11.48A24,24,0,0,1,152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155ZM232,128A104,104,0,0,1,79.12,219.82L45.07,231.17a16,16,0,0,1-20.24-20.24l11.35-34.05A104,104,0,1,1,232,128Zm-40,24a8,8,0,0,0-4.42-7.16l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88A40,40,0,0,0,192,152Z"/></symbol>
+<symbol id="i-x" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></symbol>
+</svg>
+
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<!-- ═══════ LOADER ═══════ -->
+<div id="loader" role="status" aria-live="polite" aria-label="Cargando Catrin Barbershop">
+    <div class="loader__panel loader__panel--a"></div>
+    <div class="loader__panel loader__panel--b"></div>
+    <div class="loader__seam"></div>
+    <div class="loader__core">
+        <div class="loader__dial">
+            <svg class="loader__ring" viewBox="0 0 200 200" aria-hidden="true">
+                <circle class="loader__ring-track" cx="100" cy="100" r="92"/>
+                <circle class="loader__ring-arc" cx="100" cy="100" r="92" pathLength="100"/>
+                <g class="loader__ticks"></g>
+            </svg>
+            <img class="loader__skull" src="media/img/skull-bone.png" width="552" height="481" alt="">
+        </div>
+        <img class="loader__word" src="media/img/wordmark-bone.png" width="976" height="378" alt="Catrin Barbershop">
+        <div class="loader__meter" aria-hidden="true">
+            <div class="loader__pole"><span class="loader__pole-fill"></span></div>
+            <p class="loader__count"><span id="loader-num">0</span><small>%</small></p>
+        </div>
+    </div>
+</div>
+
+<!-- Progreso de scroll: poste de barbero (escritorio) y barra superior (móvil) -->
+<div class="pole" aria-hidden="true">
+    <span class="pole__cap"></span>
+    <span class="pole__tube"><span class="pole__fill"></span></span>
+    <span class="pole__cap pole__cap--b"></span>
+</div>
+<div class="topbar" aria-hidden="true"><span class="topbar__fill"></span></div>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ═══════ HEADER ═══════ -->
+<header class="site-header" id="site-header">
+    <div class="site-header__inner">
+        <a href="#inicio" class="brand" aria-label="Catrin Barbershop, ir al inicio">
+            <img class="brand__skull" src="media/img/skull-bone.png" width="552" height="481" alt="">
+            <span class="brand__name">Catrin <b>Barbershop</b></span>
+        </a>
+
+        <nav class="nav" aria-label="Principal">
+            <a href="#servicios" class="nav__link">Servicios</a>
+            <a href="#trabajos" class="nav__link">Trabajos</a>
+            <a href="#estudio" class="nav__link">Estudio</a>
+            <a href="#visitanos" class="nav__link">Visítanos</a>
+        </nav>
+
+        <a class="btn btn--gold btn--sm btn--magnetic header__cta" href="https://wa.me/526677753403" data-wa="Hola Catrin Barbershop, quiero agendar mi cita." target="_blank" rel="noopener" data-cta="nav">
+            <span class="btn__label">Agendar mi cita</span>
+            <svg class="icon" aria-hidden="true"><use href="#i-whatsapp-logo"/></svg>
+        </a>
+
+        <button class="burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+            <svg class="icon" aria-hidden="true"><use href="#i-list"/></svg>
+        </button>
+    </div>
+</header>
+
+<!-- ═══════ MENÚ MÓVIL ═══════ -->
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menú de navegación" hidden>
+    <button class="menu__close" id="menu-close" type="button" aria-label="Cerrar menú">
+        <svg class="icon" aria-hidden="true"><use href="#i-x"/></svg>
+    </button>
+    <nav class="menu__nav" aria-label="Menú móvil">
+        <a href="#servicios" class="menu__link"><span>Servicios</span></a>
+        <a href="#trabajos" class="menu__link"><span>Trabajos</span></a>
+        <a href="#estudio" class="menu__link"><span>Estudio</span></a>
+        <a href="#reservar" class="menu__link"><span>Reservar</span></a>
+        <a href="#visitanos" class="menu__link"><span>Visítanos</span></a>
+    </nav>
+    <div class="menu__foot">
+        <a class="btn btn--gold btn--block" href="https://wa.me/526677753403" data-wa="Hola Catrin Barbershop, quiero agendar mi cita." target="_blank" rel="noopener" data-cta="menu">
+            <span class="btn__label">Estoy listo, agendar</span>
+            <svg class="icon" aria-hidden="true"><use href="#i-whatsapp-logo"/></svg>
+        </a>
+        <p class="menu__meta">Plaza Villas del Río, Local 17<br>Lunes a sábado, 10:00 a 20:00</p>
+    </div>
+</div>
+
+<main id="contenido">
+
+<!-- ═══════ HERO ═══════ -->
+<section id="inicio" class="hero" aria-labelledby="hero-title">
+    <div class="hero__bricks" aria-hidden="true"></div>
+    <div class="hero__glow" aria-hidden="true"></div>
+
+    <canvas class="hero__canvas" id="skull-canvas" aria-hidden="true"></canvas>
+    <img class="hero__skull" id="hero-skull" src="media/img/skull-bone.png" width="552" height="481" alt="Calavera con barba y navajas cruzadas, logotipo de Catrin Barbershop">
+
+    <div class="hero__ring" aria-hidden="true">
+        <svg viewBox="0 0 200 200" class="hero__ring-svg">
+            <defs><path id="ring-path" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+            <text><textPath href="#ring-path" startOffset="0">CORTE / BARBA / TINTES / NIÑOS / CULIACÁN / </textPath></text>
+        </svg>
+        <svg class="hero__ring-icon icon"><use href="#i-scissors"/></svg>
+    </div>
+
+    <div class="container hero__inner">
+        <h1 id="hero-title" class="hero__title">
+            <span class="hero__line"><span class="hero__chars">Sal hecho un</span></span>
+            <span class="hero__line hero__line--big"><span class="hero__chars hero__gold">catrín.</span></span>
+        </h1>
+        <p class="hero__sub">Cortes modernos y clásicos, barba a navaja y tintes en Plaza Villas del Río. Reserva por WhatsApp.</p>
+        <div class="hero__cta">
+            <a class="btn btn--gold btn--lg btn--magnetic" href="https://wa.me/526677753403" data-wa="Hola Catrin Barbershop, quiero agendar mi cita." target="_blank" rel="noopener" data-cta="hero">
+                <span class="btn__label">Quiero mi cita</span>
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
+            </a>
+            <a class="btn btn--ghost btn--lg" href="#servicios">
+                <span class="btn__label">Ver servicios</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════ MARQUEE (único de la página) ═══════ -->
+<div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+        <span>Corte moderno</span><i></i><span class="is-outline">Corte clásico</span><i></i><span>Corte para niños</span><i></i><span class="is-outline">Delineado de barba</span><i></i><span>Camuflaje de barba</span><i></i><span class="is-outline">Mask negra</span><i></i><span>Tintes</span><i></i><span class="is-outline">Faciales</span><i></i>
+        <span>Corte moderno</span><i></i><span class="is-outline">Corte clásico</span><i></i><span>Corte para niños</span><i></i><span class="is-outline">Delineado de barba</span><i></i><span>Camuflaje de barba</span><i></i><span class="is-outline">Mask negra</span><i></i><span>Tintes</span><i></i><span class="is-outline">Faciales</span><i></i>
+    </div>
+</div>
+
+<!-- ═══════ MANIFIESTO ═══════ -->
+<section id="manifiesto" class="manifesto" aria-labelledby="manifesto-title">
+    <div class="container manifesto__inner">
+        <h2 id="manifesto-title" class="manifesto__text">Llevar una barba es una gran responsabilidad. Aquí la tratamos como tal.</h2>
+        <p class="manifesto__note">Nueva administración. El mismo respeto por el oficio.</p>
+
+        <figure class="manifesto__photo manifesto__photo--a" data-parallax="-90">
+            <img src="media/img/corte-moderno.webp" width="1200" height="1600" loading="lazy" decoding="async" alt="Joven con corte degradado y diseño lateral hecho con navaja en Catrin Barbershop">
+        </figure>
+        <figure class="manifesto__photo manifesto__photo--b" data-parallax="-160">
+            <img src="media/img/barba-clasica.webp" width="1200" height="1600" loading="lazy" decoding="async" alt="Hombre con barba recortada y corte limpio, de perfil, con capa azul marino">
+        </figure>
+    </div>
+</section>
+
+<!-- ═══════ FACHADA (imagen que se abre con el scroll) ═══════ -->
+<section id="fachada" class="reveal-media" aria-labelledby="fachada-title">
+    <div class="rm__stage">
+        <div class="rm__frame">
+            <img class="rm__img" src="media/img/fachada.webp" width="1358" height="1600" loading="lazy" decoding="async" alt="Fachada de Catrin Barbershop en Plaza Villas del Río: letrero negro iluminado con la calavera y navajas cruzadas, y bandera dorada de Barber Shop">
+        </div>
+        <div class="rm__veil" aria-hidden="true"></div>
+        <div class="rm__copy">
+            <h2 id="fachada-title" class="rm__title">Busca la calavera.<br>Ahí es.</h2>
+            <p class="rm__text">Plaza Villas del Río, Local 17. Letrero negro, bandera dorada y una silla esperándote.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════ SERVICIOS ═══════ -->
+<section id="servicios" class="services tone-light" aria-labelledby="services-title">
+    <div class="container">
+        <header class="section-head">
+            <p class="eyebrow">Servicios</p>
+            <h2 id="services-title" class="h2">Elige tu servicio.</h2>
+            <p class="lede">Cada corte empieza con una charla. Dinos qué buscas y lo afinamos con máquina, tijera y navaja.</p>
+        </header>
+
+        <ul class="svc-list" id="svc-list">
+            <li class="svc" data-img="media/img/corte-moderno.webp">
+                <h3 class="svc__name">Corte moderno</h3>
+                <div class="svc__body">
+                    <p class="svc__desc">Degradados, texturas y diseños al ritmo de hoy. Tú traes la referencia, nosotros la afinamos.</p>
+                    <img class="svc__thumb" src="media/img/corte-moderno.webp" width="1200" height="1600" loading="lazy" decoding="async" alt="Corte moderno con degradado y diseño lateral" style="object-position:50% 72%">
+                    <a class="svc__cta" href="https://wa.me/526677753403" data-wa="Hola Catrin Barbershop, quiero un corte moderno." target="_blank" rel="noopener" data-cta="service-moderno"><span>Lo quiero</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+                </div>
+            </li>
+            <li class="svc" data-img="media/img/barba-clasica.webp">
+                <h3 class="svc__name">Corte clásico</h3>
+                <div class="svc__body">
+                    <p class="svc__desc">Tijera, raya y navaja. Un corte sobrio, limpio y que nunca pasa de moda.</p>
+                    <img class="svc__thumb" src="media/img/barba-clasica.webp" width="1200" height="1600" loading="lazy" decoding="async" alt="Corte clásico limpio con barba recortada" style="object-position:50% 52%">
+                    <a class="svc__cta" href="https://wa.me/526677753403" data-wa="Hola Catrin Barbershop, quiero un corte clásico." target="_blank" rel="noopener" data-cta="service-clasico"><span>Lo quiero</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+                </div>
+            </li>
+            <li class="svc" data-img="media/img/corte-nino.webp">
+                <h3 class="svc__name">Corte para niños</h3>
+                <div class="svc__body">
+                    <p class="svc__desc">Su primer corte con paciencia y actitud. Salen peinados y listos para presumir.</p>
+                    <img class="svc__thumb" src="media/img/corte-nino.webp" width="1200" height="1600" loading="lazy" decoding="async" alt="Niño con corte degradado en Catrin Barbershop" style="object-position:50% 80%">
+                    <a class="svc__cta" href="https://wa.me/526677753403" data-wa="Hola Catrin Barbershop, quiero agendar un corte para mi peque." target="_blank" rel="noopener" data-cta="service-ninos"><span>Agendar a mi peque</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+                </div>
+            </li>
+            <li class="svc" data-img="media/img/fade-barba.webp">
+                <h3 class="svc__name">Delineado de barba</h3>
+                <div class="svc__body">
+                    <p class="svc__desc">Líneas definidas con navaja para una barba que se ve intencional, no descuidada.</p>
+                    <img class="svc__thumb" src="media/img/fade-barba.webp" width="739" height="1315" loading="lazy" decoding="async" alt="Barba delineada con navaja y degradado en las patillas" style="object-position:50% 36%">
+                    <a class="svc__cta" href="https://wa.me/526677753403" data-wa="Hola Catrin Barbershop, quiero un delineado de barba." target="_blank" rel="noopener" data-cta="service-delineado"><span>Lo quiero</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+                </div>
+            </li>
+            <li class="svc" data-img="media/img/antes.webp">
+                <h3 class="svc__name">Camuflaje de barba</h3>
+                <div class="svc__body">
+                    <p class="svc__desc">Cubrimos las canas y rellenamos zonas para una barba pareja y con carácter.</p>
+                    <img class="svc__thumb" src="media/img/antes.webp" width="725" height="488" loading="lazy" decoding="async" alt="Barba canosa antes de un camuflaje de barba" style="object-position:50% 40%">
+                    <a class="svc__cta" href="https://wa.me/526677753403" data-wa="Hola Catrin Barbershop, quiero un camuflaje de barba." target="_blank" rel="noopener" data-cta="service-camuflaje"><span>Lo quiero</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+                </div>
+            </li>
+            <li class="svc" data-img="media/img/poster-descanso.webp">
+                <h3 class="svc__name">Mask negra</h3>
+                <div class="svc__body">
+                    <p class="svc__desc">Mascarilla negra para limpiar la piel y dejarte fresco antes de salir.</p>
+                    <img class="svc__thumb" src="media/img/poster-descanso.webp" width="540" height="960" loading="lazy" decoding="async" alt="Cliente recostado y relajado durante un servicio facial" style="object-position:50% 34%">
+                    <a class="svc__cta" href="https://wa.me/526677753403" data-wa="Hola Catrin Barbershop, quiero una mask negra." target="_blank" rel="noopener" data-cta="service-mask"><span>Lo quiero</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+                </div>
+            </li>
+            <li class="svc" data-img="media/img/tinte-nino.webp">
+                <h3 class="svc__name">Tintes</h3>
+                <div class="svc__body">
+                    <p class="svc__desc">Del negro profundo al azul eléctrico. Color con cuidado y resultado parejo.</p>
+                    <img class="svc__thumb" src="media/img/tinte-nino.webp" width="1200" height="1600" loading="lazy" decoding="async" alt="Niño con el cabello teñido de azul y degradado" style="object-position:50% 46%">
+                    <a class="svc__cta" href="https://wa.me/526677753403" data-wa="Hola Catrin Barbershop, quiero un tinte." target="_blank" rel="noopener" data-cta="service-tintes"><span>Lo quiero</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+                </div>
+            </li>
+            <li class="svc" data-img="media/img/aceites.webp">
+                <h3 class="svc__name">Faciales y mascarillas</h3>
+                <div class="svc__body">
+                    <p class="svc__desc">Exfoliación y cuidado de la piel para cerrar el servicio completo.</p>
+                    <img class="svc__thumb" src="media/img/aceites.webp" width="900" height="1600" loading="lazy" decoding="async" alt="Aceites y productos profesionales sobre la barra de madera de la barbería" style="object-position:50% 62%">
+                    <a class="svc__cta" href="https://wa.me/526677753403" data-wa="Hola Catrin Barbershop, quiero un facial con exfoliación." target="_blank" rel="noopener" data-cta="service-facial"><span>Lo quiero</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="svc-preview" id="svc-preview" aria-hidden="true"><img alt=""></div>
+</section>
+
+<!-- ═══════ TRABAJOS (galería con pan horizontal) ═══════ -->
+<section id="trabajos" class="gallery" aria-labelledby="gallery-title">
+    <div class="gallery__pin">
+        <header class="gallery__head container">
+            <h2 id="gallery-title" class="h2">Así salen<br>nuestros clientes.</h2>
+        </header>
+        <div class="gallery__viewport">
+            <div class="gallery__track" id="gallery-track">
+
+                <figure class="gcard gcard--tall">
+                    <video muted loop playsinline preload="none" poster="media/img/poster-fade-detalle.webp" data-src="media/video/fade-detalle.mp4" aria-label="Video: degradado con máquina y detalle final"></video>
+                    <figcaption>Degradado con máquina y detalle final</figcaption>
+                </figure>
+                <figure class="gcard gcard--mid">
+                    <img src="media/img/corte-moderno.webp" width="1200" height="1600" loading="lazy" decoding="async" alt="Corte moderno con diseño lateral hecho con navaja">
+                    <figcaption>Diseño lateral con navaja</figcaption>
+                </figure>
+                <figure class="gcard gcard--tall">
+                    <video muted loop playsinline preload="none" poster="media/img/poster-nino.webp" data-src="media/video/nino.mp4" aria-label="Video: corte para niño con degradado"></video>
+                    <figcaption>Corte para niños con paciencia</figcaption>
+                </figure>
+                <figure class="gcard gcard--short">
+                    <img src="media/img/tinte-nino.webp" width="1200" height="1600" loading="lazy" decoding="async" alt="Cabello teñido de azul con degradado en un niño">
+                    <figcaption>Tinte azul eléctrico</figcaption>
+                </figure>
+                <figure class="gcard gcard--tall">
+                    <video muted loop playsinline preload="none" poster="media/img/poster-perfil.webp" data-src="media/video/perfil.mp4" aria-label="Video: corte de perfil con degradado limpio"></video>
+                    <figcaption>Perfil limpio, línea recta</figcaption>
+                </figure>
+                <figure class="gcard gcard--mid">
+                    <img src="media/img/fade-barba.webp" width="739" height="1315" loading="lazy" decoding="async" alt="Degradado con barba delineada y peinado hacia atrás">
+                    <figcaption>Degradado con barba delineada</figcaption>
+                </figure>
+                <figure class="gcard gcard--tall">
+                    <video muted loop playsinline preload="none" poster="media/img/poster-gris.webp" data-src="media/video/gris.mp4" aria-label="Video: corte corto en cabello con canas"></video>
+                    <figcaption>Corte corto con canas con estilo</figcaption>
+                </figure>
+                <figure class="gcard gcard--short">
+                    <img src="media/img/degradado.webp" width="1200" height="1600" loading="lazy" decoding="async" alt="Vista trasera de un degradado fino con barba">
+                    <figcaption>Degradado fino por detrás</figcaption>
+                </figure>
+
+                <aside class="gcard gcard--cta" aria-label="Agenda tu cambio de look">
+                    <p class="gcard__big">Tu turno<br>es el siguiente.</p>
+                    <a class="btn btn--gold btn--lg" href="https://wa.me/526677753403" data-wa="Hola Catrin Barbershop, vi sus trabajos y quiero verme así. ¿Me agendan?" target="_blank" rel="noopener" data-cta="gallery">
+                        <span class="btn__label">Quiero verme así</span>
+                        <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
+                    </a>
+                </aside>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════ ANTES / DESPUÉS ═══════ -->
+<section id="cambio" class="change tone-gold" aria-labelledby="change-title">
+    <div class="container change__grid">
+        <div class="change__copy">
+            <h2 id="change-title" class="h2">Mismo hombre.<br>Otra actitud.</h2>
+            <p class="lede">Camuflaje de canas, barba perfilada con navaja y un corte limpio. Mueve el control y compruébalo.</p>
+            <a class="btn btn--ink btn--lg" href="https://wa.me/526677753403" data-wa="Hola Catrin Barbershop, quiero un camuflaje de barba como el de su página." target="_blank" rel="noopener" data-cta="change">
+                <span class="btn__label">Quiero mi camuflaje</span>
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
+            </a>
+        </div>
+
+        <div class="ba" id="ba" style="--pos:50%">
+            <div class="ba__stage">
+                <img class="ba__img ba__img--after" src="media/img/despues.webp" width="725" height="488" loading="lazy" decoding="async" alt="Después: barba castaña perfilada con navaja y cabeza rapada">
+                <img class="ba__img ba__img--before" src="media/img/antes.webp" width="725" height="488" loading="lazy" decoding="async" alt="Antes: barba canosa y sin forma">
+                <span class="ba__line" aria-hidden="true"><span class="ba__knob"><svg class="icon"><use href="#i-arrow-left"/></svg><svg class="icon"><use href="#i-arrow-right"/></svg></span></span>
+                <input class="ba__range" type="range" min="0" max="100" value="50" step="0.1" aria-label="Comparar antes y después de un camuflaje de barba">
+            </div>
+            <p class="ba__labels" aria-hidden="true"><span>Antes</span><span>Después</span></p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════ ESTUDIO (bento) ═══════ -->
+<section id="estudio" class="studio" aria-labelledby="studio-title">
+    <div class="container">
+        <header class="section-head">
+            <p class="eyebrow">El estudio</p>
+            <h2 id="studio-title" class="h2">Un lugar para<br>quedarte cómodo.</h2>
+        </header>
+
+        <div class="bento">
+            <article class="tile tile--video">
+                <video muted loop playsinline preload="none" poster="media/img/poster-ambiente.webp" data-src="media/video/ambiente.mp4" aria-label="Recorrido por el interior de la barbería: sillones, espejos redondos y luces"></video>
+                <div class="tile__cap"><h3>Sillones, espejos y buena luz</h3><p>Pared de ladrillo, madera y buena luz para que te sientas en casa.</p></div>
+            </article>
+            <article class="tile tile--wide">
+                <img src="media/img/estudio-interior.webp" width="828" height="647" loading="lazy" decoding="async" alt="Interior de Catrin Barbershop con sillones negros, espejos redondos iluminados y barra de madera">
+                <div class="tile__cap"><h3>Sillas cómodas, cero prisas</h3></div>
+            </article>
+            <article class="tile tile--gold">
+                <p class="tile__big">Nueva<br>administración.</p>
+                <p class="tile__small">Mismo respeto por el oficio, más ganas de atenderte.</p>
+            </article>
+            <article class="tile tile--photo">
+                <video muted loop playsinline preload="none" poster="media/img/poster-serum.webp" data-src="media/video/serum.mp4" aria-label="Video: frasco de serum para barba sobre la barra de madera"></video>
+                <div class="tile__cap"><h3>Serum para tu barba</h3></div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════ RITUAL (sticky stack) ═══════ -->
+<section id="ritual" class="ritual" aria-labelledby="ritual-title">
+    <div class="container">
+        <header class="section-head section-head--tight">
+            <h2 id="ritual-title" class="h2">Así es tu cita.</h2>
+        </header>
+
+        <div class="stack">
+            <article class="scard" style="--i:0">
+                <div class="scard__media"><img src="media/img/mostrador.webp" width="1000" height="1333" loading="lazy" decoding="async" alt="Mostrador de madera con la tarjeta de citas de Catrin Barbershop y la pared de ladrillo al fondo"></div>
+                <div class="scard__body">
+                    <h3 class="scard__title">Escríbenos</h3>
+                    <p>Cuéntanos qué servicio quieres y qué día te late. Te confirmamos tu lugar por WhatsApp.</p>
+                </div>
+            </article>
+            <article class="scard" style="--i:1">
+                <div class="scard__media"><video muted loop playsinline preload="none" poster="media/img/poster-descanso.webp" data-src="media/video/descanso.mp4" aria-label="Video: cliente recostado y relajado en la silla"></video></div>
+                <div class="scard__body">
+                    <h3 class="scard__title">Siéntate</h3>
+                    <p>Ponte cómodo. Platicamos tu estilo y arrancamos con máquina, tijera y navaja.</p>
+                </div>
+            </article>
+            <article class="scard" style="--i:2">
+                <div class="scard__media"><video muted loop playsinline preload="none" poster="media/img/poster-perfil-2.webp" data-src="media/video/perfil-2.mp4" aria-label="Video: resultado final de un degradado de perfil"></video></div>
+                <div class="scard__body">
+                    <h3 class="scard__title">Sal hecho<br>un catrín</h3>
+                    <p>Acabado con producto, espejo y la seguridad de quien sabe cómo se ve.</p>
+                    <a class="btn btn--gold btn--lg" href="https://wa.me/526677753403" data-wa="Hola Catrin Barbershop, estoy listo para mi corte. ¿Qué horario tienen?" target="_blank" rel="noopener" data-cta="ritual">
+                        <span class="btn__label">Estoy listo para mi corte</span>
+                        <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
+                    </a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════ RESERVA ═══════ -->
+<section id="reservar" class="booking tone-light" aria-labelledby="booking-title">
+    <div class="container booking__grid">
+        <div class="booking__copy">
+            <p class="eyebrow">Tu cita</p>
+            <h2 id="booking-title" class="h2">Reserva tu lugar.</h2>
+            <p class="lede">Llena tus datos y abrimos WhatsApp con el mensaje listo. Solo falta que le des enviar.</p>
+            <ul class="facts">
+                <li><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><div><b>Llámanos</b><a href="tel:+526677753403">667 775 3403</a></div></li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg><div><b>Horario</b><span>Lunes a sábado, 10:00 a 20:00</span></div></li>
+            </ul>
+        </div>
+
+        <form class="form" id="booking-form" novalidate>
+            <div class="field">
+                <label for="f-name">Tu nombre</label>
+                <input id="f-name" name="nombre" type="text" autocomplete="given-name" placeholder="Ej. Carlos" required>
+                <p class="field__error" id="e-name" role="alert"></p>
+            </div>
+            <div class="field">
+                <label for="f-service">Servicio</label>
+                <select id="f-service" name="servicio" required>
+                    <option value="" selected disabled>Elige una opción</option>
+                    <option>Corte moderno</option>
+                    <option>Corte clásico</option>
+                    <option>Corte para niños</option>
+                    <option>Delineado de barba</option>
+                    <option>Camuflaje de barba</option>
+                    <option>Mask negra</option>
+                    <option>Tintes</option>
+                    <option>Faciales y mascarillas</option>
+                    <option>Aún no lo sé, necesito asesoría</option>
+                </select>
+                <p class="field__error" id="e-service" role="alert"></p>
+            </div>
+            <fieldset class="field field--chips">
+                <legend>¿Qué día te late?</legend>
+                <div class="chips" role="group">
+                    <label class="chip"><input type="radio" name="dia" value="Hoy"><span>Hoy</span></label>
+                    <label class="chip"><input type="radio" name="dia" value="Mañana"><span>Mañana</span></label>
+                    <label class="chip"><input type="radio" name="dia" value="Esta semana"><span>Esta semana</span></label>
+                    <label class="chip"><input type="radio" name="dia" value="Fin de semana"><span>Fin de semana</span></label>
+                </div>
+            </fieldset>
+            <fieldset class="field field--chips">
+                <legend>¿A qué hora?</legend>
+                <div class="chips" role="group">
+                    <label class="chip"><input type="radio" name="turno" value="Mañana (10:00 a 13:00)"><span>Mañana</span></label>
+                    <label class="chip"><input type="radio" name="turno" value="Tarde (13:00 a 17:00)"><span>Tarde</span></label>
+                    <label class="chip"><input type="radio" name="turno" value="Noche (17:00 a 20:00)"><span>Noche</span></label>
+                </div>
+            </fieldset>
+            <div class="field">
+                <label for="f-note">Algo más que debamos saber <small>(opcional)</small></label>
+                <textarea id="f-note" name="nota" rows="3" placeholder="Ej. Quiero un degradado bajo con diseño"></textarea>
+            </div>
+            <button class="btn btn--ink btn--lg btn--block" type="submit">
+                <span class="btn__label">Enviar mi cita por WhatsApp</span>
+                <svg class="icon" aria-hidden="true"><use href="#i-whatsapp-logo"/></svg>
+            </button>
+            <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+    </div>
+</section>
+
+<!-- ═══════ VISÍTANOS ═══════ -->
+<section id="visitanos" class="visit" aria-labelledby="visit-title">
+    <div class="container visit__grid">
+        <div class="visit__copy">
+            <p class="eyebrow">Visítanos</p>
+            <h2 id="visit-title" class="h2">Aquí<br>te esperamos.</h2>
+            <address class="visit__addr">
+                <svg class="icon" aria-hidden="true"><use href="#i-map-pin"/></svg>
+                <span>Plaza Villas del Río, Local 17<br>Culiacán, Sinaloa</span>
+            </address>
+            <p class="visit__hours"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg><span>Lunes a sábado, 10:00 a 20:00</span></p>
+            <a class="btn btn--gold btn--lg" href="https://www.google.com/maps/dir/?api=1&destination=Plaza+Villas+del+R%C3%ADo+Culiac%C3%A1n+Sinaloa" target="_blank" rel="noopener" data-cta="directions">
+                <span class="btn__label">Cómo llegar</span>
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
+            </a>
+        </div>
+        <div class="visit__media">
+            <video class="visit__video" muted loop playsinline preload="none" poster="media/img/poster-fachada.webp" data-src="media/video/fachada.mp4" aria-label="Video: fachada de Catrin Barbershop al atardecer"></video>
+            <div class="visit__map">
+                <iframe title="Mapa de Catrin Barbershop en Plaza Villas del Río, Culiacán" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Plaza+Villas+del+R%C3%ADo+Culiac%C3%A1n&amp;z=16&amp;output=embed"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- ═══════ FOOTER ═══════ -->
+<footer class="footer">
+    <div class="container footer__top">
+        <a class="footer__talk" href="https://wa.me/526677753403" data-wa="Hola Catrin Barbershop, tengo una duda." target="_blank" rel="noopener" data-cta="footer">
+            <span>¿Dudas? Clic aquí y platiquemos</span>
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
+        </a>
+        <div class="footer__cols">
+            <div>
+                <h3>Navega</h3>
+                <ul>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#trabajos">Trabajos</a></li>
+                    <li><a href="#estudio">Estudio</a></li>
+                    <li><a href="#reservar">Reservar</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Contacto</h3>
+                <ul>
+                    <li><a href="https://wa.me/526677753403" data-wa="Hola Catrin Barbershop." target="_blank" rel="noopener">WhatsApp 667 775 3403</a></li>
+                    <li><a href="tel:+526677753403">Llamar</a></li>
+                    <li>Plaza Villas del Río, Local 17</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Horario</h3>
+                <ul>
+                    <li>Lunes a sábado</li>
+                    <li>10:00 a 20:00</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer__mark" aria-hidden="true">
+        <img src="media/img/wordmark-bone.png" width="976" height="378" loading="lazy" decoding="async" alt="">
+    </div>
+    <div class="container footer__bottom">
+        <p>© 2026 Catrin Barbershop. Todos los derechos reservados.</p>
+        <p>Culiacán, Sinaloa, México</p>
+    </div>
+</footer>
+
+<!-- ═══════ WHATSAPP FLOTANTE ═══════ -->
+<a class="wa-float" href="https://wa.me/526677753403" data-wa="Hola Catrin Barbershop, quiero información." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp a Catrin Barbershop" data-cta="float">
+    <span class="wa-float__tip">¿Agendamos?</span>
+    <span class="wa-float__btn"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp-logo"/></svg></span>
+</a>
+
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/ScrollTrigger.min.js"></script>
+<script src="vendor/SplitText.min.js"></script>
+<script src="vendor/lenis.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
