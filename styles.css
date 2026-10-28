@@ -6,7 +6,7 @@
    01 Tokens · 02 Base · 03 Utilidades · 04 Botones · 05 Loader · 06 Progreso y grano
    07 Header y menú · 08 Hero · 09 Marquee · 10 Manifiesto · 11 Fachada · 12 Servicios
    13 Galería · 14 Antes/Después · 15 Estudio · 16 Ritual · 17 Reserva · 18 Visítanos
-   19 Footer · 20 WhatsApp flotante · 21 Movimiento reducido
+   18b Únete al equipo · 19 Footer · 20 WhatsApp flotante · 21 Movimiento reducido
    ========================================================================== */
 
 /* 01 TOKENS ---------------------------------------------------------------- */
@@ -790,6 +790,42 @@ html:not(.js) #loader { display: none; }
     .visit__grid { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
     .visit__media { padding-bottom: 14%; }
     .visit__video { left: -8%; width: 30%; }
+}
+
+/* 18b ÚNETE AL EQUIPO (vacante) --------------------------------------------- */
+.crew { padding-block: clamp(88px, 13vw, 170px); }
+.crew__grid { display: grid; gap: clamp(40px, 7vw, 88px); align-items: start; }
+.crew__grid > * { min-width: 0; }
+.crew .eyebrow { color: var(--ink-0); }
+.crew .h2 { font-size: clamp(2.7rem, 6vw, 5.4rem); }
+.crew .lede { text-wrap: pretty; }
+.crew__label { margin-bottom: 14px; font: 700 .76rem/1 var(--f-body); letter-spacing: .2em; text-transform: uppercase; }
+.crew__reqs { margin-top: 36px; }
+.crew__reqs ul { border-bottom: 1px solid var(--rule); }
+.crew__reqs li {
+    display: flex; align-items: flex-start; gap: 14px; padding: 13px 0;
+    border-top: 1px solid var(--rule); font-size: clamp(1.05rem, 1.5vw, 1.2rem); font-weight: 500;
+}
+.crew__reqs li::before { content: ""; flex: none; width: 9px; height: 9px; margin-top: .52em; background: currentColor; transform: rotate(45deg); }
+.crew__copy .btn { margin-top: 36px; white-space: normal; line-height: 1.15; padding-block: .9em; }
+
+.crew__offer { padding: clamp(24px, 4vw, 48px); background: var(--ink-0); color: var(--bone); clip-path: var(--chamfer-lg); }
+.crew__offer .crew__label { color: var(--gold); }
+.crew__big {
+    display: flex; align-items: baseline; flex-wrap: wrap; gap: 0 16px;
+    font: 900 clamp(5.6rem, 24vw, 10.5rem)/.86 var(--f-display); color: var(--gold);
+}
+.crew__big span { font: 800 clamp(1.9rem, 6vw, 3rem)/1 var(--f-display); text-transform: uppercase; color: var(--bone); }
+.crew__perks { margin-top: 26px; border-bottom: 1px solid var(--line); }
+.crew__perks li {
+    padding: 14px 0; border-top: 1px solid var(--line);
+    font: 800 clamp(1.6rem, 4.6vw, 2.3rem)/1 var(--f-display); letter-spacing: .02em; text-transform: uppercase;
+}
+.crew__hours { display: flex; align-items: flex-start; gap: 14px; margin-top: 28px; color: var(--bone-dim); }
+.crew__hours .icon { width: 26px; height: 26px; margin-top: 1px; color: var(--gold); }
+
+@media (min-width: 900px) {
+    .crew__grid { grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); }
 }
 
 /* 19 FOOTER ---------------------------------------------------------------- */

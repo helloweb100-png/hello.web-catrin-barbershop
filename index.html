@@ -60,8 +60,13 @@
         "openingHoursSpecification": [{
             "@type": "OpeningHoursSpecification",
             "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-            "opens": "10:00",
+            "opens": "08:00",
             "closes": "20:00"
+        }, {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Sunday",
+            "opens": "10:00",
+            "closes": "17:00"
         }],
         "hasMap": "https://www.google.com/maps/search/?api=1&query=Plaza+Villas+del+R%C3%ADo+Culiac%C3%A1n",
         "hasOfferCatalog": {
@@ -178,7 +183,7 @@
             <span class="btn__label">Estoy listo, agendar</span>
             <svg class="icon" aria-hidden="true"><use href="#i-whatsapp-logo"/></svg>
         </a>
-        <p class="menu__meta">Plaza Villas del Río, Local 17<br>Lunes a sábado, 10:00 a 20:00</p>
+        <p class="menu__meta">Plaza Villas del Río, Local 17<br>Lunes a sábado, 8:00 a 20:00<br>Domingo, 10:00 a 17:00</p>
     </div>
 </div>
 
@@ -487,7 +492,7 @@
             <p class="lede">Llena tus datos y abrimos WhatsApp con el mensaje listo. Solo falta que le des enviar.</p>
             <ul class="facts">
                 <li><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><div><b>Llámanos</b><a href="tel:+526677753403">667 775 3403</a></div></li>
-                <li><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg><div><b>Horario</b><span>Lunes a sábado, 10:00 a 20:00</span></div></li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg><div><b>Horario</b><span>Lunes a sábado, 8:00 a 20:00<br>Domingo, 10:00 a 17:00</span></div></li>
             </ul>
         </div>
 
@@ -525,7 +530,7 @@
             <fieldset class="field field--chips">
                 <legend>¿A qué hora?</legend>
                 <div class="chips" role="group">
-                    <label class="chip"><input type="radio" name="turno" value="Mañana (10:00 a 13:00)"><span>Mañana</span></label>
+                    <label class="chip"><input type="radio" name="turno" value="Mañana (8:00 a 13:00)"><span>Mañana</span></label>
                     <label class="chip"><input type="radio" name="turno" value="Tarde (13:00 a 17:00)"><span>Tarde</span></label>
                     <label class="chip"><input type="radio" name="turno" value="Noche (17:00 a 20:00)"><span>Noche</span></label>
                 </div>
@@ -553,7 +558,7 @@
                 <svg class="icon" aria-hidden="true"><use href="#i-map-pin"/></svg>
                 <span>Plaza Villas del Río, Local 17<br>Culiacán, Sinaloa</span>
             </address>
-            <p class="visit__hours"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg><span>Lunes a sábado, 10:00 a 20:00</span></p>
+            <p class="visit__hours"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg><span>Lunes a sábado, 8:00 a 20:00<br>Domingo, 10:00 a 17:00</span></p>
             <a class="btn btn--gold btn--lg" href="https://www.google.com/maps/dir/?api=1&destination=Plaza+Villas+del+R%C3%ADo+Culiac%C3%A1n+Sinaloa" target="_blank" rel="noopener" data-cta="directions">
                 <span class="btn__label">Cómo llegar</span>
                 <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
@@ -564,6 +569,45 @@
             <div class="visit__map">
                 <iframe title="Mapa de Catrin Barbershop en Plaza Villas del Río, Culiacán" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Plaza+Villas+del+R%C3%ADo+Culiac%C3%A1n&amp;z=16&amp;output=embed"></iframe>
             </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════ ÚNETE AL EQUIPO (vacante) ═══════ -->
+<section id="unete" class="crew tone-gold" aria-labelledby="crew-title">
+    <div class="container crew__grid">
+        <div class="crew__copy">
+            <p class="eyebrow">Únete al equipo</p>
+            <h2 id="crew-title" class="h2">Se solicita<br>barbero y<br>lady barber.</h2>
+            <p class="lede">Solicitamos personal con experiencia, barberos y lady barbers, para la nueva administración. Si cuidas el detalle, aquí hay una silla para ti.</p>
+
+            <div class="crew__reqs">
+                <h3 class="crew__label">Requisitos</h3>
+                <ul>
+                    <li>Experiencia en cortes modernos y clásicos</li>
+                    <li>Delineado de barba</li>
+                    <li>Faciales (opcional)</li>
+                    <li>Buena presentación</li>
+                </ul>
+            </div>
+
+            <a class="btn btn--ink btn--lg" href="https://wa.me/526677753403" data-wa="Hola Catrin Barbershop, vi que solicitan barbero y lady barber y me interesa unirme al equipo. ¿Me dan más información?" target="_blank" rel="noopener" data-cta="crew">
+                <span class="btn__label">Quiero unirme al equipo</span>
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
+            </a>
+        </div>
+
+        <div class="crew__offer">
+            <h3 class="crew__label">Ofrecemos</h3>
+            <p class="crew__big">50%<span>de comisión</span></p>
+            <ul class="crew__perks">
+                <li>Clientes asegurados</li>
+                <li>Equipo</li>
+                <li>Establecimiento</li>
+                <li>Buen ambiente laboral</li>
+                <li>Crecimiento</li>
+            </ul>
+            <p class="crew__hours"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg><span>Lunes a sábado, 8:00 a 20:00<br>Domingo, 10:00 a 17:00</span></p>
         </div>
     </div>
 </section>
@@ -598,8 +642,8 @@
             <div>
                 <h3>Horario</h3>
                 <ul>
-                    <li>Lunes a sábado</li>
-                    <li>10:00 a 20:00</li>
+                    <li>Lunes a sábado, 8:00&nbsp;a&nbsp;20:00</li>
+                    <li>Domingo, 10:00&nbsp;a&nbsp;17:00</li>
                 </ul>
             </div>
         </div>

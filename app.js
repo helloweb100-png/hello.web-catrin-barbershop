@@ -570,10 +570,10 @@
                 onEnter: (b) => gsap.to(b, { autoAlpha: 1, y: 0, duration: 1.2, ease: 'expo.out', stagger, clearProps: 'transform,opacity,visibility' })
             });
         };
-        batch('.eyebrow, .lede, .change__copy .btn, .visit__copy .btn, .visit__addr, .visit__hours, .facts li');
+        batch('.eyebrow, .lede, .change__copy .btn, .visit__copy .btn, .visit__addr, .visit__hours, .facts li, .crew__reqs, .crew__copy .btn');
         batch('.svc', { y: 26, stagger: 0.07, start: 'top 94%' });
         batch('.tile', { y: 60, stagger: 0.12, start: 'top 92%' });
-        batch('.form, .ba, .visit__media', { y: 50, stagger: 0.14 });
+        batch('.form, .ba, .visit__media, .crew__offer', { y: 50, stagger: 0.14 });
         batch('.footer__cols > div, .footer__talk', { y: 30, stagger: 0.1, start: 'top 96%' });
 
         // Wordmark del footer
