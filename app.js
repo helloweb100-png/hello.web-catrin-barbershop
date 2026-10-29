@@ -5,7 +5,7 @@
    01 Config y utilidades · 02 WhatsApp · 03 Smooth scroll · 04 Loader · 05 Calavera de partículas
    06 Intro del hero · 07 Header, menú y progreso · 08 Marquee · 09 Manifiesto · 10 Fachada
    11 Titulares y reveals · 12 Servicios · 13 Galería · 14 Antes/Después · 15 Estudio y ritual
-   16 Formulario · 17 Videos · 18 Arranque
+   16 Formulario · 16b Sonido de fondo · 17 Videos · 18 Arranque
    ========================================================================== */
 (() => {
     'use strict';
@@ -570,10 +570,11 @@
                 onEnter: (b) => gsap.to(b, { autoAlpha: 1, y: 0, duration: 1.2, ease: 'expo.out', stagger, clearProps: 'transform,opacity,visibility' })
             });
         };
-        batch('.eyebrow, .lede, .change__copy .btn, .visit__copy .btn, .visit__addr, .visit__hours, .facts li, .crew__reqs, .crew__copy .btn');
+        batch('.eyebrow, .lede, .change__copy .btn, .visit__copy .btn, .visit__addr, .visit__hours, .facts li, .crew__reqs, .crew__copy .btn, .products__cta');
         batch('.svc', { y: 26, stagger: 0.07, start: 'top 94%' });
         batch('.tile', { y: 60, stagger: 0.12, start: 'top 92%' });
         batch('.form, .ba, .visit__media, .crew__offer', { y: 50, stagger: 0.14 });
+        batch('.pcard', { y: 60, stagger: 0.12, start: 'top 92%' });
         batch('.footer__cols > div, .footer__talk', { y: 30, stagger: 0.1, start: 'top 96%' });
 
         // Wordmark del footer
@@ -790,14 +791,53 @@
         });
     }
 
-    /** En móvil el botón flotante tapa el envío del formulario: se esconde mientras el formulario está a la vista. */
+    /** En móvil los botones flotantes tapan el envío del formulario: se esconden mientras el formulario está a la vista. */
     function setupFloatAway() {
-        const form = $('#booking-form'), fab = $('.wa-float');
-        if (!form || !fab) return;
+        const form = $('#booking-form'), fabs = $$('.wa-float, .sound');
+        if (!form || !fabs.length) return;
         const narrow = window.matchMedia('(max-width: 899.98px)');
         new IntersectionObserver((en) => {
-            fab.classList.toggle('is-away', en[0].isIntersecting && narrow.matches);
+            fabs.forEach((fab) => fab.classList.toggle('is-away', en[0].isIntersecting && narrow.matches));
         }, { threshold: 0.12 }).observe(form);
+    }
+
+    /* 16b SONIDO DE FONDO ---------------------------------------------------- */
+    /** Los navegadores no permiten audio sin un gesto del usuario: la música arranca con el botón "Sonido" y acompaña a todos los videos. */
+    function setupSound() {
+        const btn = $('#sound-toggle'), audio = $('#bg-audio');
+        if (!btn || !audio) return;
+        const VOL = 0.4;
+        let on = false, timer = 0;
+        const ramp = (to, ms, done) => {
+            clearInterval(timer);
+            const from = audio.volume, t0 = performance.now();
+            timer = setInterval(() => {
+                const k = Math.min(1, (performance.now() - t0) / ms);
+                audio.volume = from + (to - from) * k;
+                if (k >= 1) { clearInterval(timer); if (done) done(); }
+            }, 30);
+        };
+        const paint = () => {
+            btn.setAttribute('aria-pressed', String(on));
+            btn.setAttribute('aria-label', on ? 'Silenciar música de fondo' : 'Activar música de fondo');
+        };
+        btn.addEventListener('click', () => {
+            if (!on) {
+                on = true; paint(); audio.volume = 0;
+                const p = audio.play();
+                if (p && p.then) p.then(() => ramp(VOL, 900)).catch(() => { on = false; paint(); });
+                else ramp(VOL, 900);
+            } else {
+                on = false; paint();
+                ramp(0, 500, () => audio.pause());
+            }
+        });
+        // Con la pestaña en segundo plano la música se pausa, y vuelve si seguía activada
+        document.addEventListener('visibilitychange', () => {
+            if (!on) return;
+            if (document.hidden) audio.pause();
+            else { const p = audio.play(); if (p && p.catch) p.catch(() => {}); }
+        });
     }
 
     /* 17 VIDEOS (carga y reproducción por visibilidad) ----------------------- */
@@ -845,6 +885,7 @@
 
     function boot() {
         setupLinks();
+        setupSound();
         const hasLibs = window.gsap && window.ScrollTrigger && window.SplitText;
         if (!hasLibs) {
             // Degradación: sitio completo y legible, sin animaciones

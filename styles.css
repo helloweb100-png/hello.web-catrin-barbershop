@@ -5,8 +5,8 @@
    Índice:
    01 Tokens · 02 Base · 03 Utilidades · 04 Botones · 05 Loader · 06 Progreso y grano
    07 Header y menú · 08 Hero · 09 Marquee · 10 Manifiesto · 11 Fachada · 12 Servicios
-   13 Galería · 14 Antes/Después · 15 Estudio · 16 Ritual · 17 Reserva · 18 Visítanos
-   18b Únete al equipo · 19 Footer · 20 WhatsApp flotante · 21 Movimiento reducido
+   13 Galería · 14 Antes/Después · 15 Estudio · 15b Productos · 16 Ritual · 17 Reserva · 18 Visítanos
+   18b Únete al equipo · 19 Footer · 20 WhatsApp flotante · 20b Sonido · 21 Movimiento reducido
    ========================================================================== */
 
 /* 01 TOKENS ---------------------------------------------------------------- */
@@ -682,6 +682,53 @@ html:not(.js) #loader { display: none; }
     .tile--photo { grid-column: 4; grid-row: 2; min-height: 0; }
 }
 
+/* 15b PRODUCTOS ------------------------------------------------------------ */
+.products { padding-block: clamp(88px, 13vw, 170px); }
+.pgrid { display: grid; gap: 14px; grid-auto-flow: dense; }
+.pgrid > * { min-width: 0; }
+.pcard {
+    display: grid; grid-template-rows: auto 1fr; overflow: hidden;
+    background: var(--ink-0); color: var(--bone); clip-path: var(--chamfer-lg);
+}
+.pcard__media { position: relative; aspect-ratio: 4 / 5; overflow: hidden; background: var(--ink-2); }
+.pcard__media video, .pcard__media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease); }
+.pcard:hover .pcard__media video, .pcard:hover .pcard__media img { transform: scale(1.04); }
+.pcard__media--mosaic { aspect-ratio: 1 / 1; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 2px; }
+.pcard__media--mosaic video, .pcard__media--mosaic img { position: static; min-width: 0; min-height: 0; }
+.pcard:hover .pcard__media--mosaic video, .pcard:hover .pcard__media--mosaic img { transform: none; }
+.pcard__body { display: grid; align-content: start; gap: 12px; padding: clamp(22px, 3vw, 32px); }
+.pcard__flag {
+    justify-self: start; padding: 7px 12px; background: var(--gold); color: var(--ink-0);
+    font: 700 .72rem/1 var(--f-body); letter-spacing: .16em; text-transform: uppercase;
+    clip-path: polygon(6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%, 0 6px);
+}
+.pcard__name { font: 900 clamp(2.5rem, 7vw, 3.6rem)/.9 var(--f-display); text-transform: uppercase; }
+.pcard__text { color: var(--bone-dim); }
+.pcard__sub { margin-top: 6px; font: 700 .76rem/1 var(--f-body); letter-spacing: .2em; text-transform: uppercase; color: var(--gold); }
+.pcard__tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.pcard__tags li {
+    padding: 9px 13px; background: rgba(236, 236, 238, .09); color: var(--bone);
+    font: 600 .86rem/1 var(--f-body);
+    clip-path: polygon(6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%, 0 6px);
+}
+.products__cta { display: flex; flex-direction: column; align-items: flex-start; gap: 22px; margin-top: clamp(40px, 6vw, 72px); }
+.products__ask { font: 900 clamp(2.6rem, 8vw, 5.2rem)/.9 var(--f-display); text-transform: uppercase; }
+
+@media (min-width: 640px) {
+    .pgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .pcard--wide { grid-column: 1 / -1; grid-template-rows: none; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; }
+    .pcard--wide .pcard__body { align-content: center; padding: clamp(24px, 5vw, 64px); }
+}
+@media (min-width: 900px) {
+    .pgrid { gap: 16px; }
+    .products__cta { flex-direction: row; align-items: center; justify-content: space-between; gap: 40px; }
+}
+@media (min-width: 1100px) {
+    .pgrid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .pcard__name { font-size: clamp(2.3rem, 3.3vw, 3.1rem); }
+    .pcard--wide .pcard__name { font-size: clamp(3.6rem, 6vw, 5.6rem); }
+}
+
 /* 16 RITUAL (sticky stack) ------------------------------------------------- */
 .ritual { padding-block: clamp(72px, 11vw, 150px) clamp(88px, 13vw, 170px); background: var(--ink-1); border-top: 1px solid var(--line); }
 .stack { display: grid; grid-template-columns: minmax(0, 1fr); }
@@ -882,6 +929,27 @@ html:not(.js) #loader { display: none; }
 .wa-float { transition: transform .6s var(--ease), opacity .4s ease; }
 .wa-float.is-away { opacity: 0; transform: translateY(90px); pointer-events: none; }
 
+/* 20b SONIDO DE FONDO ------------------------------------------------------ */
+.sound {
+    position: fixed; left: max(16px, env(safe-area-inset-left)); bottom: max(16px, env(safe-area-inset-bottom)); z-index: var(--z-float);
+    display: inline-flex; align-items: center; gap: 12px; min-height: 46px; padding: 0 18px 0 16px;
+    border: 0; cursor: pointer; background: var(--ink-0); color: var(--bone);
+    box-shadow: inset 0 0 0 1px var(--line-2); clip-path: var(--chamfer);
+    font: 700 .78rem/1 var(--f-body); letter-spacing: .12em; text-transform: uppercase;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform .6s var(--ease), opacity .4s ease, background-color .3s ease, color .3s ease;
+}
+.sound[aria-pressed="true"] { color: var(--gold); }
+.sound:hover, .sound:focus-visible { background: var(--gold); color: var(--ink-0); }
+.sound.is-away { opacity: 0; transform: translateY(90px); pointer-events: none; }
+.sound__bars { display: flex; align-items: flex-end; gap: 3px; height: 16px; }
+.sound__bars i { width: 3px; height: 100%; background: currentColor; transform: scaleY(.25); transform-origin: 50% 100%; }
+.sound[aria-pressed="true"] .sound__bars i { animation: eq 1.1s ease-in-out infinite alternate; }
+.sound[aria-pressed="true"] .sound__bars i:nth-child(2) { animation-duration: .8s; animation-delay: -.3s; }
+.sound[aria-pressed="true"] .sound__bars i:nth-child(3) { animation-duration: 1.3s; animation-delay: -.6s; }
+.sound[aria-pressed="true"] .sound__bars i:nth-child(4) { animation-duration: .95s; animation-delay: -.15s; }
+@keyframes eq { from { transform: scaleY(.25); } to { transform: scaleY(1); } }
+
 /* 21 MOVIMIENTO REDUCIDO --------------------------------------------------- */
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
@@ -889,4 +957,5 @@ html:not(.js) #loader { display: none; }
     .hero__glow { animation: none; }
     .wa-float__tip { animation: none !important; opacity: 1; transform: none; }
     .hero__ring-svg, .hero__ring-icon, .loader__ring-arc { animation: none !important; }
+    .sound[aria-pressed="true"] .sound__bars i { animation: none !important; transform: scaleY(.8); }
 }
