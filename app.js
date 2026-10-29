@@ -4,7 +4,7 @@
    Estructura:
    01 Config y utilidades · 02 WhatsApp · 03 Smooth scroll · 04 Loader · 05 Calavera de partículas
    06 Intro del hero · 07 Header, menú y progreso · 08 Marquee · 09 Manifiesto · 10 Fachada
-   11 Titulares y reveals · 12 Servicios · 13 Galería · 14 Antes/Después · 15 Estudio y ritual
+   11 Titulares y reveals · 12 Servicios · 13 Galería · 14 Antes/Después · 14b Antes/Después en galería · 15 Estudio y ritual
    16 Formulario · 16b Sonido de fondo · 17 Videos · 18 Arranque
    ========================================================================== */
 (() => {
@@ -679,7 +679,7 @@
                 scrollTrigger: { trigger: pin, start: 'top top', end: () => `+=${dist()}`, pin: true, scrub: 1, invalidateOnRefresh: true, anticipatePin: 1 }
             });
             // Parallax interno de cada medio mientras la cinta se desplaza
-            $$('.gcard video, .gcard img', track).forEach((m) => {
+            $$('.gcard:not(.gcard--ba) video, .gcard:not(.gcard--ba) img', track).forEach((m) => {
                 gsap.fromTo(m, { x: -26, scale: 1.14 }, {
                     x: 26, scale: 1.14, ease: 'none',
                     scrollTrigger: { trigger: m.parentElement, containerAnimation: pan, start: 'left right', end: 'right left', scrub: true }
@@ -711,6 +711,31 @@
                     .to(o, { v: 84, duration: 1.4, ease: 'power2.inOut', ...step })
                     .to(o, { v: 50, duration: 0.9, ease: 'power3.out', ...step });
             }
+        });
+    }
+
+    /* 14b ANTES / DESPUÉS EN LA GALERÍA -------------------------------------- */
+    /** Mismas tarjetas con línea divisoria que el control de arriba, dentro de la galería; al verse por primera vez la línea se mueve sola como pista. */
+    function setupCompareCards() {
+        $$('.gcard--ba').forEach((card) => {
+            const range = $('.ba__range', card);
+            let touched = false, hint = null;
+            const apply = (v) => { card.style.setProperty('--pos', `${v}%`); range.value = v; };
+            const stop = () => { touched = true; if (hint) hint.kill(); };
+            range.addEventListener('input', () => { stop(); card.style.setProperty('--pos', `${range.value}%`); });
+            range.addEventListener('pointerdown', stop);
+            if (reduce) return;
+            new IntersectionObserver((en, io) => {
+                if (!en[0].isIntersecting) return;
+                io.disconnect();
+                if (touched) return;
+                const o = { v: 50 };
+                const step = { onUpdate: () => apply(o.v.toFixed(1)) };
+                hint = window.gsap.timeline()
+                    .to(o, { v: 18, duration: 0.9, ease: 'power2.inOut', ...step })
+                    .to(o, { v: 82, duration: 1.3, ease: 'power2.inOut', ...step })
+                    .to(o, { v: 50, duration: 0.8, ease: 'power3.out', ...step });
+            }, { threshold: 0.7 }).observe(card);
         });
     }
 
@@ -873,6 +898,7 @@
         setupServices();
         setupGallery();
         setupCompare();
+        setupCompareCards();
         setupTiles();
         setupStack();
         setupMagnetic();

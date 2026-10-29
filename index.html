@@ -385,13 +385,14 @@
                     <video muted loop playsinline preload="none" poster="media/img/poster-corte-trasero.webp" data-src="media/video/corte-trasero.mp4" aria-label="Video: corte con degradado limpio visto por detrás"></video>
                     <figcaption>Corte limpio por detrás</figcaption>
                 </figure>
-                <figure class="gcard gcard--mid">
-                    <img src="media/img/corte-barba-antes.webp" width="1200" height="1600" loading="lazy" decoding="async" alt="Antes: cliente de perfil con capa negra, con el cabello y la barba más largos">
-                    <figcaption>Corte y barba · antes</figcaption>
-                </figure>
-                <figure class="gcard gcard--mid">
-                    <img src="media/img/corte-barba-despues.webp" width="1200" height="1600" loading="lazy" decoding="async" alt="Después: el mismo cliente con degradado marcado, cabello peinado y barba recortada">
-                    <figcaption>Corte y barba · después</figcaption>
+                <figure class="gcard gcard--mid gcard--ba" style="--pos:50%">
+                    <img class="ba__img ba__img--after" src="media/img/corte-barba-despues.webp" width="1200" height="1600" loading="lazy" decoding="async" alt="Después: el mismo cliente con degradado marcado, cabello peinado y barba recortada">
+                    <img class="ba__img ba__img--before" src="media/img/corte-barba-antes.webp" width="1200" height="1600" loading="lazy" decoding="async" alt="Antes: cliente de perfil con capa negra, con el cabello y la barba más largos">
+                    <span class="ba__tag ba__tag--l" aria-hidden="true">Antes</span>
+                    <span class="ba__tag ba__tag--r" aria-hidden="true">Después</span>
+                    <span class="ba__line" aria-hidden="true"><span class="ba__knob"><svg class="icon"><use href="#i-arrow-left"/></svg><svg class="icon"><use href="#i-arrow-right"/></svg></span></span>
+                    <figcaption>Corte y barba · antes y después</figcaption>
+                    <input class="ba__range" type="range" min="0" max="100" value="50" step="0.1" aria-label="Comparar antes y después de un corte y barba">
                 </figure>
                 <figure class="gcard gcard--tall">
                     <video muted loop playsinline preload="none" poster="media/img/poster-corte-taper.webp" data-src="media/video/corte-taper.mp4" aria-label="Video: degradado bajo con peinado hacia atrás"></video>
@@ -405,21 +406,23 @@
                     <video muted loop playsinline preload="none" poster="media/img/poster-nino-diseno.webp" data-src="media/video/nino-diseno.mp4" aria-label="Video: corte para niño con degradado y líneas de diseño"></video>
                     <figcaption>Corte para niños con diseño</figcaption>
                 </figure>
-                <figure class="gcard gcard--tall">
-                    <video muted loop playsinline preload="none" poster="media/img/poster-perfilado-sin-tinte.webp" data-src="media/video/perfilado-sin-tinte.mp4" aria-label="Video: perfilado de barba sin tinte"></video>
-                    <figcaption>Perfilado de barba sin tinte</figcaption>
+                <figure class="gcard gcard--tall gcard--ba" style="--pos:50%">
+                    <video class="ba__img ba__img--after" muted loop playsinline preload="none" poster="media/img/poster-perfilado-con-tinte.webp" data-src="media/video/perfilado-con-tinte.mp4" aria-hidden="true"></video>
+                    <video class="ba__img ba__img--before" muted loop playsinline preload="none" poster="media/img/poster-perfilado-sin-tinte.webp" data-src="media/video/perfilado-sin-tinte.mp4" aria-hidden="true"></video>
+                    <span class="ba__tag ba__tag--l" aria-hidden="true">Antes</span>
+                    <span class="ba__tag ba__tag--r" aria-hidden="true">Después</span>
+                    <span class="ba__line" aria-hidden="true"><span class="ba__knob"><svg class="icon"><use href="#i-arrow-left"/></svg><svg class="icon"><use href="#i-arrow-right"/></svg></span></span>
+                    <figcaption>Perfilado de barba · sin tinte y con tinte</figcaption>
+                    <input class="ba__range" type="range" min="0" max="100" value="50" step="0.1" aria-label="Comparar el perfilado de barba sin tinte y con tinte">
                 </figure>
-                <figure class="gcard gcard--mid">
-                    <img src="media/img/tinte-natural.webp" width="1200" height="1600" loading="lazy" decoding="async" alt="Cliente de perfil con barba castaña recortada antes de aplicar el tinte">
-                    <figcaption>Tinte de cabello y barba · antes</figcaption>
-                </figure>
-                <figure class="gcard gcard--mid">
-                    <img src="media/img/tinte-aplicado.webp" width="900" height="1600" loading="lazy" decoding="async" alt="Cliente de frente con protector de cuello, con el tinte negro aplicado en cabello y barba">
-                    <figcaption>Tinte de cabello y barba · aplicación</figcaption>
-                </figure>
-                <figure class="gcard gcard--tall">
-                    <video muted loop playsinline preload="none" poster="media/img/poster-perfilado-con-tinte.webp" data-src="media/video/perfilado-con-tinte.mp4" aria-label="Video: perfilado de barba con tinte"></video>
-                    <figcaption>Perfilado de barba con tinte</figcaption>
+                <figure class="gcard gcard--mid gcard--ba" style="--pos:50%">
+                    <img class="ba__img ba__img--after" src="media/img/tinte-natural.webp" width="1200" height="1600" loading="lazy" decoding="async" alt="Después: el mismo cliente de perfil con el cabello y la barba ya terminados tras el tinte">
+                    <img class="ba__img ba__img--before" src="media/img/tinte-aplicado.webp" width="900" height="1600" loading="lazy" decoding="async" alt="Antes: cliente de frente con protector de cuello y el tinte negro recién aplicado en cabello y barba">
+                    <span class="ba__tag ba__tag--l" aria-hidden="true">Antes</span>
+                    <span class="ba__tag ba__tag--r" aria-hidden="true">Después</span>
+                    <span class="ba__line" aria-hidden="true"><span class="ba__knob"><svg class="icon"><use href="#i-arrow-left"/></svg><svg class="icon"><use href="#i-arrow-right"/></svg></span></span>
+                    <figcaption>Tinte de cabello y barba · antes y después</figcaption>
+                    <input class="ba__range" type="range" min="0" max="100" value="50" step="0.1" aria-label="Comparar antes y después del tinte de cabello y barba">
                 </figure>
 
                 <aside class="gcard gcard--cta" aria-label="Agenda tu cambio de look">

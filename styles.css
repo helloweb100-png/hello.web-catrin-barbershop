@@ -5,7 +5,7 @@
    Índice:
    01 Tokens · 02 Base · 03 Utilidades · 04 Botones · 05 Loader · 06 Progreso y grano
    07 Header y menú · 08 Hero · 09 Marquee · 10 Manifiesto · 11 Fachada · 12 Servicios
-   13 Galería · 14 Antes/Después · 15 Estudio · 15b Productos · 16 Ritual · 17 Reserva · 18 Visítanos
+   13 Galería · 14 Antes/Después · 14b Antes/Después en galería · 15 Estudio · 15b Productos · 16 Ritual · 17 Reserva · 18 Visítanos
    18b Únete al equipo · 19 Footer · 20 WhatsApp flotante · 20b Sonido · 21 Movimiento reducido
    ========================================================================== */
 
@@ -635,6 +635,19 @@ html:not(.js) #loader { display: none; }
 @media (min-width: 900px) {
     .change__grid { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
 }
+
+/* 14b ANTES / DESPUÉS EN LA GALERÍA ---------------------------------------- */
+.gcard--ba { --pos: 50%; user-select: none; }
+.gcard--ba:hover img, .gcard--ba:hover video { transform: none; }   /* la línea y el recorte deben quedar alineados */
+.gcard--ba figcaption { z-index: 2; pointer-events: none; }
+.ba__tag {
+    position: absolute; top: 14px; z-index: 2; padding: 7px 11px; pointer-events: none;
+    background: var(--ink-0); color: var(--bone);
+    font: 800 .95rem/1 var(--f-display); letter-spacing: .08em; text-transform: uppercase;
+    clip-path: polygon(6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%, 0 6px);
+}
+.ba__tag--l { left: 14px; }
+.ba__tag--r { right: 14px; }
 
 /* 15 ESTUDIO (bento) ------------------------------------------------------- */
 .studio { padding-block: clamp(88px, 13vw, 170px); background: var(--ink-0); }
